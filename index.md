@@ -1,83 +1,45 @@
-## Welcome to GitHub Pages
+<h1 id="heart" style="visibility: visible;">💕</h1>
+<h1 id="count"></h1>
+<script type="text/javascript" language="javascript">
+    function test() {
+        window.setTimeout("test()", 1000);
+        var second = 1000;
+        var minute = second * 60;
+        var hour = minute * 60;
+        var day = hour * 24;
+        var year = day * 365;
+        var begin = new Date("2019-08-07").getTime();
+        var now = new Date().getTime();
+        var difference = now - begin;
+        // 天数
+        var days = Math.ceil(difference / day);
 
-You can use the [editor on GitHub](https://github.com/LiLittleCat/love/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/LiLittleCat/love/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-<header>
-<h1 id="sitetime"></h1>
-<script language=javascript>
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000
-        var minutes = seconds * 60
-        var hours = minutes * 60
-        var days = hours * 24
-        var years = days * 365
-        var today = new Date()
-        var todayYear = today.getFullYear()
-        var todayMonth = today.getMonth()
-        var todayDate = today.getDate()
-        var todayHour = today.getHours()
-        var todayMinute = today.getMinutes()
-        var todaySecond = today.getSeconds()
-            /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) 
-            year - 作为date对象的年份，为4位年份值
-            month - 0-11之间的整数，做为date对象的月份
-            day - 1-31之间的整数，做为date对象的天数
-            hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-            minutes - 0-59之间的整数，做为date对象的分钟数
-            seconds - 0-59之间的整数，做为date对象的秒数
-            microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2019, 8, 7, 00, 00, 00)
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
-        var diff = t2 - t1
-        var diffYears = Math.floor(diff / years)
-        var diffDays = Math.floor((diff / days) - diffYears * 365)
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
-        /* document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒" */
-        /*document.getElementById("sitetime").innerHTML = " 很努力地存活了 " + (diffYears * 365 + diffDays) + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒"
-        */
-        document.getElementById("sitetime").innerHTML = "💕 " + (diffYears * 365 + diffDays) + " days have we been in love."
-
+        document.getElementById("count").innerHTML = days + " days <br>have we been in love.";
     }
-    siteTime()
+    test()
 </script>
-</header>
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
-
-<!-- 本站总访问量<span id="busuanzi_value_site_pv"></span>次
-本站访客数<span id="busuanzi_value_site_uv"></span>人次
-本文总阅读量<span id="busuanzi_value_page_pv"></span>次 -->
+<!-- <script>
+    function blinklink() { //参数是id，如果对你name比较熟悉，你可以改改代码换成name
+        window.setTimeout("blinklink()", 1000);
+        var id = document.getElementById("heart");
+        if (id.style.display == 'none') { //none表示隐藏起来的意思，也就说如果这个元素是隐藏起来的话
+            id.style.display = 'block'; //显示它
+        } else { //否则
+            id.style.display = 'none'; //隐藏它；
+        }
+    }
+    blinklink();
+</script> -->
+<script>
+    function blinklink() { //参数是id，如果对你name比较熟悉，你可以改改代码换成name
+        window.setTimeout("blinklink()", 1000);
+        var id = document.getElementById("heart");
+        if (id.style.visibility == 'hidden') { //none表示隐藏起来的意思，也就说如果这个元素是隐藏起来的话
+            id.style.visibility = 'visible'; //显示它
+        } else { //否则
+            id.style.visibility = 'hidden'; //隐藏它；
+        }
+    }
+    blinklink();
+</script>
